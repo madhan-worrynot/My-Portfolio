@@ -150,22 +150,13 @@ function closeModal() {
 //contact 
 
 
+// No need for the IntersectionObserver, since the form should just be visible without animations
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("#contact form");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    form.classList.add("slide-in"); // Add the slide-in class when visible
-                }
-            });
-        },
-        { threshold: 0.3 } // Trigger when 30% of the form is visible
-    );
-
-    observer.observe(form);
+    // No need for observer to add slide-in class anymore
 });
+
 
 
 

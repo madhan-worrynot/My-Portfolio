@@ -939,7 +939,7 @@ html {
 form {
     max-width: 500px;
     margin: 0 auto;
-    background: linear-gradient(145deg, #191f36, #23213b);
+    background: linear-gradient(145deg, #314394, #191730);
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4), 0px -5px 15px rgba(255, 255, 255, 0.05);
@@ -947,16 +947,10 @@ form {
     flex-direction: column;
     gap: 20px;
 
-    /* Hidden for animation */
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-}
-
-form.slide-in {
+    /* Remove side-slide animation */
     opacity: 1;
     transform: translateX(0);
-    
+    transition: none;  /* Disable any transition */
 }
 
 /* Input and Textarea */
@@ -990,7 +984,7 @@ form label {
     text-align: left;
     font-weight: 500;
     margin-bottom: 5px;
-    color: #59b2f4;
+    color: white;
 }
 
 /* Submit Button */
@@ -1028,22 +1022,6 @@ form button:hover {
     }
 }
 
-
-form {
-    padding: 30px;
-    border: 2px solid transparent; /* Transparent border for the glow effect */
-    border-radius: 15px;
-    background: linear-gradient(#23213b, #23213b) padding-box, /* Background */
-                linear-gradient(145deg, #59b2f4, #46a3e0) border-box; /* Glow gradient */
-    box-shadow: 0px 4px 8px rgba(89, 178, 244, 0.2); /* Soft outer glow */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-form:hover {
-    box-shadow: 0px 6px 12px rgba(89, 178, 244, 0.5), /* Brighter glow on hover */
-                0px 2px 6px rgba(89, 178, 244, 0.3);
-    transform: scale(1.02); /* Slight zoom effect */
-}
 
 #contact {
     padding: 50px 0;
